@@ -37,3 +37,11 @@ We can remove obvious methods and use its content itself. For example, in _CodeG
 
 changed _CodeGenerator_.
 
+## 6. Extract Method
+
+We can extract some code fragment that can be put into a separate function. For example in _Rule_ class some part of the constructor can be changed into a separate function called _createRHS_.
+
+changed _Rule_.
+
+
+# Questions
