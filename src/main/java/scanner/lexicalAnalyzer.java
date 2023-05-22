@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 public class lexicalAnalyzer {
     private Matcher matcher;
 
+
     public lexicalAnalyzer(java.util.Scanner sc) {
         StringBuilder input = new StringBuilder();
         while (sc.hasNext()) {
@@ -23,7 +24,7 @@ public class lexicalAnalyzer {
     }
 
     public Token getNextToken() {
-
+        matcher = this.getMatcher();
         while (matcher.find()) {
             for (Type t : Type.values()) {
 
@@ -42,5 +43,9 @@ public class lexicalAnalyzer {
             }
         }
         return new Token(Type.EOF, "$");
+    }
+
+    public Matcher getMatcher() {
+        return matcher;
     }
 }

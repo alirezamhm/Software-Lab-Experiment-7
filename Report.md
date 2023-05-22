@@ -23,7 +23,12 @@ changed _ParseTable_ and _Action_ and added _Shift_, _Reduce_, and _Accept_.
 
 In this refactoring technique we have to change a function that returns a value but also changes something inside an object to two separate functions. We changed _getTemp_ function in memory to two different functions, the first one create required space for the temp and second one will return the last temp space.
 
-changed _Memory_ and _CodeGenerator_
+changed _Memory_ and _CodeGenerator_.
 
+## 4.  Self Encapsulated Field
+
+For this technique, we have to change a private field to have getter and setter.
+
+changed _LexicalAnalyzer_.
 
 
