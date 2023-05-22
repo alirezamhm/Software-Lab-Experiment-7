@@ -4,6 +4,7 @@ import Log.Log;
 import errorHandler.ErrorHandler;
 import scanner.token.Token;
 import semantic.symbol.Symbol;
+import semantic.symbol.SymbolFacade;
 import semantic.symbol.SymbolTable;
 import semantic.symbol.SymbolType;
 
@@ -20,7 +21,8 @@ public class CodeGenerator {
     private SymbolTable symbolTable;
 
     public CodeGenerator() {
-        symbolTable = new SymbolTable(memory);
+        SymbolFacade symbolFacade = SymbolFacade.getInstance();
+        symbolTable = symbolFacade.createSymbolTable(memory);
         //TODO
     }
 
