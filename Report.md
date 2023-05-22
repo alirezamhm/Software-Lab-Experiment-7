@@ -9,4 +9,14 @@ Refactoring
 
 ## 1. Facade
 
-For this refactoring we have to decrease coupling for different packages used in the project (although there isn't really any coupling happening here!). For this purpose, we add a Facade class called _SymbolFacade_ in the _semantic.symbol_ package. Then, anywhere that we need to have a _SymbolTable_ or _Symbol_ object we use this class.
+For this refactoring task we have to decrease coupling for different packages used in the project (although there isn't really any coupling happening here!). For this purpose, we add a Facade class called _SymbolFacade_ in the _semantic.symbol_ package. Then, anywhere that we need to have a _SymbolTable_ or _Symbol_ object we use this class.
+
+Created _SymbolFacade_ and changed _CodeGenerator_.
+
+## 2. State/Strategy
+
+In this task we have to change an conditional statement with polymorphism. We will create three subclasses for _Action_ class called _Shift_, _Reduce_, and _Accept_. Then we override the _toString_ function in each of them instead of using switch case statement.
+
+changed _ParseTable_ and _Action_ and added _Shift_, _Reduce_, and _Accept_.
+
+
