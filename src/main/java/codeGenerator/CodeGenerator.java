@@ -126,7 +126,7 @@ public class CodeGenerator {
                 defParam();
                 break;
             case 31:
-                lastTypeBool();
+                symbolTable.setLastType(SymbolType.Bool);
                 break;
             case 32:
                 lastTypeInt();
@@ -487,10 +487,6 @@ public class CodeGenerator {
 
         symbolStack.push(className);
         symbolStack.push(methodName);
-    }
-
-    public void lastTypeBool() {
-        symbolTable.setLastType(SymbolType.Bool);
     }
 
     public void lastTypeInt() {

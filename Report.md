@@ -25,10 +25,15 @@ In this refactoring technique we have to change a function that returns a value 
 
 changed _Memory_ and _CodeGenerator_.
 
-## 4.  Self Encapsulated Field
+## 4. Self Encapsulated Field
 
 For this technique, we have to change a private field to have getter and setter.
 
 changed _LexicalAnalyzer_.
 
+## 5. Inline Method
+
+We can remove obvious methods and use its content itself. For example, in _CodeGenerator_ we can remove _lastSymbolBool_ function and replace it with its content.
+
+changed _CodeGenerator_.
 
